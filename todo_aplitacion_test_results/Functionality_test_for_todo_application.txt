@@ -307,14 +307,14 @@ Status: PASS
 
 ------------------------------------------------------------------------
 
-TS.7. Checkmark (Task Completion Toggle)
+TS.7. Check mark (Task Completion Toggle)
 
 ID 7.1 - Mark Task as Completed
 
 TC Steps: Add a task and click the circle next to it.
 
-Expected Result: Task becomes visually marked as completed (green checkmark is displayed, text grayed out).
-Actual Result: Task becomes visually marked as completed (green checkmark is displayed, text grayed out).
+Expected Result: Task becomes visually marked as completed (green check mark is displayed, text grayed out).
+Actual Result: Task becomes visually marked as completed (green check mark is displayed, text grayed out).
 
 Status: PASS
 
@@ -333,6 +333,86 @@ Status: PASS
 ID 7.3 - Task Counter Update on Completion
 
 
+---------------------------------------------------------------------
+
+TS.8. Edit functionality
+
+ID 8.1: Edit Task via Double-Click
+
+TC Steps: Double-click on an existing task in the task list.
+
+Expected Result: The task field becomes editable (text input field appears).
+Actual: The task field becomes editable (text input field appears).
+
+Status: PASS
+
+
+ID 8.2 - Update task via 'Enter' key
+
+TC Steps:
+  Double-click on a task, 
+  modify the task text, and press Enter to save the changes.
+
+Expected Result: The task text updates to the new value in the task list.
+Actual: The task text updates to the new value in the task list.
+
+Status: PASS
+
+
+ID 8.3 - Update task by clicking outside the text field.
+
+TC Steps:
+  Double-click on a task, 
+  modify the task text, and click outside the text field to save the changes.
+
+Expected Result: The task text updates to the new value in the task list.
+Actual: The task text updates to the new value in the task list.
+
+Status: PASS
+
+
+ID 8.4 - Task Edit with Empty Text
+
+TC Steps:
+  Double-click on a task, 
+  delete all text. 
+  Press Enter or click outside the text field to save.
+
+Expected Result: deletes the task.
+Actual: deletes the task.
+
+Status: PASS
+
+
+ID 8.5 - Edit Task that is checked as Complete
+
+TC Steps: 
+  Mark  task as completed,
+  double-click on a task, 
+  modify the task text,  
+  press Enter or click outside the text field to save.
+
+Expected Result: The task text is updated, and the task completion status remains the same.
+Actual: The task text is updated, and the task completion status remains the same.
+
+Status: PASS
+
+
+
+
+
+
+Additional tests:
+
+To do list page:
+
+TC.1.1. elements are visible
+(first TC always must be positive)
+* 1. Open the page
+* 2. Observe heder - expected 'To Do List'
+* 3. Observe footer - expected 'Double-click to edit a toodo'
+* 4. Observe task input field - expected visible
+* 5. Observe input field place holder text -  expected(what need's to be done)
 
 
 
