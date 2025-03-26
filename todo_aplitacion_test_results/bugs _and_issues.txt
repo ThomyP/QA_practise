@@ -1,0 +1,26 @@
+
+QA test report for ToDo management application;
+link: https://todolist.james.am/;
+
+
+bugs && issues:
+
+1. Incorrect numeration index is displayed for tasks;
+ex: '3 items left' is displayed when list consist of 4 elements;
+
+2.'Items left' numeration displays -1 when all tasks marked as completed;
+
+3.(FEATURE?)
+Arrow next to 'What need's to be done?' input filed, checks all tasks as marked,
+on 2nd click turns darker grey and does nothing,
+and on 3rd click unchecks all previously marked list items.
+It performs the same way whether 'All', 'Active', or 'Completed' are selected.
+
+4. empty space ' ' element is automatically written in after creating a new task inside the input field,
+because of that 'What need's to be done?' text is not displayed either.
+
+
+
+
+
+

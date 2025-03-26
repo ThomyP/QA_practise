@@ -1,0 +1,338 @@
+
+Functionality test for webapp: https://todolist.james.am/
+
+
+
+TS.1. Input field
+
+ID 1.1; adding a task;
+
+TC steps: Click on the input field and enter a task without special symbols.
+
+Expected Result: The task appears in the list exactly as entered.
+Actual: The task appears in the list exactly as entered.
+
+Status: PASS 
+
+
+ID 1.2; adding special symbols;
+
+TC steps: Click on the input field and enter several special symbols.
+
+Expected Result: The task appears in the list exactly as entered.
+Actual:The task appears in the list exactly as entered.
+
+Status: PASS 
+
+
+ID 1.3; adding emojis;
+
+TC steps: Click on the input field and enter several special emojis.
+
+Expected Result: The task appears in the list exactly as entered.
+Actual:The task appears in the list exactly as entered.
+
+Status: PASS 
+
+
+ID 1.4; adding 50k random characters to input field;
+
+TC steps: Click on the input field and enter 50k random characters.
+
+Expected Result: The task appears in the list exactly as entered.
+Actual:The task appears in the list exactly as entered.
+
+Status: PASS 
+
+------------------------------------------------------------------------
+TS.2. Arrow element.
+
+ID 2.1; marking a task as completed.
+
+TC steps: enter 1 task to the list; click once on arrow element.
+
+Expected Result: task will be marked as completed.
+Actual: task status does not change, 
+
+Status: FAIL
+
+
+ID 2.2; marking 2 tasks as completed.
+
+TC steps: enter 2 task to the list; click once on arrow element.
+
+Expected Result: tasks will be marked as completed.
+Actual: tasks are marked as completed.
+
+Status: PASS
+
+
+ID 2.3; marking multiple tasks as completed.
+
+TC steps: enter 5 tasks to the list; click once on arrow element.
+
+Expected Result: tasks will be marked as completed.
+Actual: tasks are marked as completed.
+
+Status: PASS
+
+
+ID 2.4; unchecking 1 task as completed.
+
+TC steps: enter 1 task to the list; click on arrow element 2 times.
+
+Expected Result: task will be unchecked as completed.
+Actual: task is marked as completed.
+
+Status: FAIL
+
+
+ID 2.5; unchecking 2 tasks as completed.
+
+TC steps: enter 2 task to the list; click on arrow element 2 times.
+
+Expected Result: tasks will be unchecked as completed.
+Actual: tasks are checked as completed.
+
+Status: FAIL
+
+
+ID 2.6; unchecking multiple tasks as completed.
+
+TC steps: enter 5 tasks to the list; click arrow element 2 times.
+
+Expected Result: tasks will be unchecked as completed.
+Actual: tasks are checked as completed.
+
+Status: FAIL
+
+------------------------------------------------------------------------
+Task Counter Display
+
+ID 3.1: Displays 1 item in the list
+
+Test Case Steps: Add 1 task to the list.
+
+Expected Result: Displays '1 item left'
+Actual: Displays '0 items left'
+
+Status: FAIL
+
+
+ID 3.2: Displays 2 items in the list
+
+Test Case Steps: Add 2 tasks to the list.
+
+Expected Result: Displays '2 items left'
+Actual: Displays '1 item left'
+
+Status: FAIL
+
+ID 3.3: Displays multiple items in the list
+
+Test Case Steps: Add 3 or more tasks to the list.
+
+Expected Result: Displays the correct number of items, such as '3 items left' or another number matching the task count.
+Actual: Displays '3 items left', but always shows 1 less than the actual task count.
+
+Status: FAIL
+
+ID 3.4: Completed task indication in the list
+
+Test Case Steps: Add 1 task to the list and mark it as completed.
+
+Expected Result: Displays '0 items left'
+Actual: Displays '-1 items left'
+
+Status: FAIL
+
+
+ID 3.5: Completed 2 tasks indication in the list
+
+Test Case Steps: Add 2 tasks to the list and mark both as completed.
+
+Expected Result: Displays '0 items left'
+Actual: Displays '-1 items left'
+
+Status: FAIL
+
+ID 3.6: Completed 2 tasks indication in the list
+
+Test Case Steps: Add 2 tasks to the list and mark both as completed.
+
+Expected Result: Displays '0 items left'
+Actual Result: Displays '-1 items left'
+
+Status: FAIL
+
+ID 3.7: Completed 3 or more tasks indication in the list
+
+Test Case Steps: Add 3 or more tasks to the list and mark all as completed.
+
+Expected Result: Displays '0 items left'
+Actual: Displays '-1 items left'
+
+Status: FAIL
+
+ID 3.8: Remaining 1 task to complete indication
+
+Test Case Steps: Add 2 tasks to the list and mark 1 as completed.
+
+Expected Result: Displays '1 item left'
+Actual: Displays '0 items left'
+
+Status: FAIL
+
+ID 3.9: Remaining 2 tasks to complete indication
+
+Test Case Steps: Add 3 tasks to the list and mark 2 as completed.
+
+Expected Result: Displays '2 items left'
+Actual: Displays '0 items left'
+
+Status: FAIL
+
+------------------------------------------------------------------------
+
+TS.4. Active Filter Performance
+
+ID 4.1 - Switching to Active with Few Tasks
+
+TC Steps: Add 5 tasks, mark 2 as completed, click "Active."
+
+Expected Result: Only 3 tasks remain visible.
+Actual: Only 3 tasks remain visible.
+
+Status: PASS
+
+
+ID 4.2 - Switching to Active with Many Tasks
+
+TC Steps: Add 100+ tasks, mark 50 as completed, click "Active."
+
+Expected Result: Only active tasks remain visible, quick change less than 1s.
+Actual: Only active tasks remain visible. quick change less than 1s.
+
+Status: PASS
+
+
+------------------------------------------------------------------------
+
+TS.5. Completed Filter Performance
+
+ID 5.1 - Switching to Active with Few Tasks
+
+TC Steps: Add 5 tasks, mark 2 as completed, click "Active."
+
+Expected Result: Only 3 tasks remain visible.
+Actual: Only 3 tasks remain visible.
+
+Status: PASS
+
+
+ID 5.2 - Switching to Active with Many Tasks
+
+TC Steps: Add 100+ tasks, mark 50 as completed, click "Active."
+
+Expected Result: Only active tasks remain visible, quick change less than 1s.
+Actual: Only active tasks remain visible, quick change less than 1s.
+
+Status: PASS
+
+------------------------------------------------------------------------
+
+TS.5. Clear Button Functionality
+
+ID 5.1 - Clear Completed Tasks
+
+TC Steps: 
+  Add 5 tasks.
+  Mark 2 tasks as completed.
+  Click the "Clear" button.
+
+Expected Result: Only active (incomplete) tasks remain. Completed tasks are removed.
+Actual: Only active (incomplete) tasks remain. Completed tasks are removed.
+
+Status: PASS
+
+
+ID 5.2 - Clear When No Completed Tasks Exist
+
+TC Steps:
+  Add 3 tasks.
+  Do not complete any.
+  Click the "Clear" button.
+
+Expected Result: Nothing changes, all tasks remain.
+Actual : (To be filled after testing)
+
+Status: PASS
+
+
+ID 5.3 - Clear All Tasks
+
+TC Steps:
+  Add 10 tasks.
+  Mark all as completed.
+  Click the "Clear" button.
+
+Expected Result: All tasks are removed, the list should be empty.
+Actual : All tasks are removed, the list is be empty.
+
+Status: PASS
+
+------------------------------------------------------------------------
+
+TS.6. Delete Button Functionality
+
+
+ID 6.1 - Delete Single Task
+
+TC Steps: Add a task and Click the "X" (delete) button next to it.
+
+Expected Result: Task is removed immediately from the list.
+Actual: Task is removed immediately from the list.
+
+Status: PASS
+
+
+ID 6.2 - Deleting Multiple Tasks
+
+TC Steps: Add 3 tasks and delete 1 task.
+  
+Expected Result: Only the selected task is deleted, others remain.
+Actual Result: Only the selected task is deleted, others remain.
+
+Status: PASS
+
+------------------------------------------------------------------------
+
+TS.7. Checkmark (Task Completion Toggle)
+
+ID 7.1 - Mark Task as Completed
+
+TC Steps: Add a task and click the circle next to it.
+
+Expected Result: Task becomes visually marked as completed (green checkmark is displayed, text grayed out).
+Actual Result: Task becomes visually marked as completed (green checkmark is displayed, text grayed out).
+
+Status: PASS
+
+ID 7.2 - Unchecking Completed Task
+
+TC Steps:
+  Add a task.
+  Mark it as completed.
+  Click the circle again to uncheck it.
+
+Expected Result: Task returns to its original active state.
+Actual Result: Task returns to its original active state.
+
+Status: PASS
+
+ID 7.3 - Task Counter Update on Completion
+
+
+
+
+
